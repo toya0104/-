@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- /ブラウザの対応言語を決める/ -->
+<lang="ja">
+<!-- /"head"はページのタイトル情報やいろんな定義を決める。ブラウザには基本表示されない。/ -->
+<head>
+  <!-- /文字コード/ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- タイトル/ -->
+  <title>CALCULATOR</title>
+  <!-- /cssとリンクする/ -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- /bodyはブラウザに表示される実際のもの/ -->
+<body>
+  <form name="calculator">
+    <table>
+
+      <!-- /trで一行つくって、colspanで結合 タグを決めclassで分けるnameで名前を付けるvalueは初期値 get_calcの中身はvalue？ -->
+      <tr>
+        <td colspan="4">
+          <input type="text" class="display" name="display" value=""disabled >
+        </td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="7" onclick="get_calc(this)"></td>
+        <td><input type="button" value="8" onclick="get_calc(this)"></td>
+        <td><input type="button" value="9" onclick="get_calc(this)"></td>
+        <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="4" onclick="get_calc(this)"></td>
+        <td><input type="button" value="5" onclick="get_calc(this)"></td>
+        <td><input type="button" value="6" onclick="get_calc(this)"></td>
+        <td><input type="button" value="×" class="operator" name="multi_btn" onclick="get_calc(this)"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="1" onclick="get_calc(this)"></td>
+        <td><input type="button" value="2" onclick="get_calc(this)"></td>
+        <td><input type="button" value="3" onclick="get_calc(this)"></td>
+        <td><input type="button" value="-" class="operator" onclick="get_calc(this)"></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="0" onclick="get_calc(this)"></td>
+        <td><input type="button" value="C" onclick="get_calc(this)"></td>
+        <td><input type="button" value="=" class="equal" onclick="get_calc(this)"></td>
+        <td><input type="button" value="+" class="operator" onclick="get_calc(this)"></td>
+      </tr>
+    </table>
+    <!-- /jsと結合/ -->
+    <script src="script.js"></script>
+  </form>
+</body>
+</html>
